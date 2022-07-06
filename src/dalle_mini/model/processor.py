@@ -52,7 +52,7 @@ class DalleBartProcessorBase:
         print('test')
     @classmethod
     def from_pretrained(cls, *args, **kwargs):
-        print('test')
+        print('DalleBartProcessorBase')
         tokenizer = DalleBartTokenizer.from_pretrained(*args, **kwargs)
         config = DalleBartConfig.from_pretrained(*args, **kwargs)
         return cls(tokenizer, config.normalize_text, config.max_text_length)
