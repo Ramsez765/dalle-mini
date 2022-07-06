@@ -48,7 +48,8 @@ class DalleBartProcessorBase:
         res["input_ids_uncond"] = jnp.repeat(self.input_ids_uncond, n, axis=0)
         res["attention_mask_uncond"] = jnp.repeat(self.attention_mask_uncond, n, axis=0)
         return res
-
+    def test(self):
+        print('test')
     @classmethod
     def from_pretrained(cls, *args, **kwargs):
         print('test')
